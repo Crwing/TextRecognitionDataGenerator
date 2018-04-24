@@ -95,4 +95,5 @@ class FakeTextDataGenerator(object):
             image_name = '{}_{}.{}'.format(text, str(index), extension)
 
         # Save the image
-        final_image.convert('RGB').save(os.path.join(out_dir, image_name))
+        image_name_save = image_name.replace(' ','')
+        final_image.convert('RGB').save(os.path.join(out_dir, image_name_save))
